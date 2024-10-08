@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bhpupo8aj0bo8"]
 
-[ext_resource type="Script" path="res://select_menu.gd" id="1_jtbtk"]
+[ext_resource type="Script" path="res://gui/select_menu.gd" id="1_jtbtk"]
 
 [node name="SelectMenu" type="Control"]
 layout_mode = 3
