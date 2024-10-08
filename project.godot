@@ -1,0 +1,29 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="spotify extended history analyzer"
+run/main_scene="res://select_menu.tscn"
+config/features=PackedStringArray("4.3", "C#", "Mobile")
+config/icon="res://icon.svg"
+
+[autoload]
+
+Analyzer="*res://analyzer.gd"
+DataProcess="*res://DataProcess.cs"
+
+[dotnet]
+
+project/assembly_name="spotify extended history analyzer"
+
+[rendering]
+
+renderer/rendering_method="mobile"

@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://bhpupo8aj0bo8"]
+
+[ext_resource type="Script" path="res://select_menu.gd" id="1_jtbtk"]
+
+[node name="SelectMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jtbtk")
+
+[node name="FileDialog" type="FileDialog" parent="."]
+title = "Open a Directory"
+initial_position = 1
+size = Vector2i(777, 440)
+ok_button_text = "Select Current Folder"
+file_mode = 2
+access = 2
+
+[node name="LocationSelect" type="Button" parent="."]
+layout_mode = 0
+offset_left = 61.0
+offset_top = 49.0
+offset_right = 165.0
+offset_bottom = 118.0
+text = "Select file location"
+
+[connection signal="dir_selected" from="FileDialog" to="." method="_on_file_dialog_dir_selected"]
+[connection signal="pressed" from="LocationSelect" to="." method="_on_location_select_pressed"]
